@@ -1,13 +1,12 @@
 import React from "react";
+import { Toast } from "./common/components/Toast/Toast";
 import AppRoutes from "./routes";
-import ErrorBoundary from "./routes/ErrorPage/ErrorPage";
 
 function App() {
   return (
     <div className="App">
-      <ErrorBoundary>
-        <AppRoutes />
-      </ErrorBoundary>
+      <AppRoutes />
+      <Toast />
     </div>
   );
 }

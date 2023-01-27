@@ -1,6 +1,8 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { observer } from "mobx-react-lite";
 
-export default function IndexPage() {
-  return <Container></Container>;
+function IndexPage() {
+  return <div></div>;
 }
+
+export default observer(IndexPage);

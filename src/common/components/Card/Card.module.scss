@@ -1,0 +1,11 @@
+.StoryCard {
+  :global .row + .row {
+    margin-top: 1.5rem;
+  }
+}
+
+.StoryCard__Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

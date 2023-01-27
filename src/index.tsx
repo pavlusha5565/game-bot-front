@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { StoreProvider } from "./stores/GlobalStoreContext";
 
 import "./index.scss";
+import ErrorBoundary from "./routes/ErrorPage/ErrorPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <StoreProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ErrorBoundary>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ErrorBoundary>
     </StoreProvider>
   </React.StrictMode>
 );
